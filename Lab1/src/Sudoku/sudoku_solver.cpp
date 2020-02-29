@@ -42,7 +42,6 @@ void SudokuSolver(string& board, int index) {
 }
 
 void SudokuSolverThread(string board) {
-	std::cout<<"board:"<<board<<std::endl;
     SudokuSolver(board, 0);
 }
 

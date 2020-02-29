@@ -3,14 +3,11 @@
 
 
 #include "global.h"
-#include "thread_solver.h"
-
-
-//cin file name thread
-void Filename_thread();
-
-//join Filename_thread thread
-void Filename();
+#include <vector>
+#include <fstream>
+#include <stdlib.h>
+#include <unistd.h>
+#include <iostream>
 
 //inite Semaphores
 void Sem_inite();
@@ -19,12 +16,21 @@ void Sem_inite();
 string ProblemReader();
 
 // set the problem in the stack buffer
-void ProblemWriter(string file_path);
+void ProblemWriter(string problem);
 
 // each file read by a thread 
-void ReadThread();
+void ReadThread(string file_path);
 
-//read file name and each file with multi-thread
-void Read();
+// a dedicated thread hold the program for reading content from files
+void ReadController_thread();
+
+void ReadController();
+
+//cin file name thread
+void Filename_thread();
+
+//join Filename_thread thread
+void Filename();
+
 
 #endif

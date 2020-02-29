@@ -6,15 +6,10 @@
 #include <semaphore.h>
 #include <thread>
 
-#include <vector>
-#include <fstream>
-#include <stdlib.h>
-#include <unistd.h>
-#include <iostream>
-
 using std::string;
 using std::stack;
 using std::thread;
+
 
 // the length of the board
 #define BOARD_LEN 9
