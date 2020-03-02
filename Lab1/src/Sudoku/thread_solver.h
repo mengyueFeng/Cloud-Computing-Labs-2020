@@ -6,6 +6,11 @@
 #include "io.h"
 #include "sudoku_solver.h"
 
+#include<unistd.h>
+
+//void num of threads
+int num_th();
+
 void SolveThreadControler();
 
 #endif
